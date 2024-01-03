@@ -30,10 +30,9 @@ function Index({ addToCart, removeFromCart, subTotal, cart }) {
   
       {token ? <Navbar props={"Order"} /> : <Navbar props={"Login"} />}
 
-      <Head>
-        
+      
       <Script src="https://cdn.tailwindcss.com"></Script>
-      </Head>
+      
 
       <HomePage />
       <div class="flex flex-col text-center w-full mb-20">
