@@ -2,11 +2,12 @@ import HomePage from "@/components/HomePage";
 import Navbar from "@/components/Navbar";
 import Product from "@/components/Product";
 import Head from "next/head";
+import Script from "next/script";
 import React, { useEffect, useState } from "react";
 
 
 
-function index({ addToCart, removeFromCart, subTotal, cart }) {
+function Index({ addToCart, removeFromCart, subTotal, cart }) {
   const [data, setData] = useState(null);
   const fetchData = async () => {
     try {
@@ -30,7 +31,8 @@ function index({ addToCart, removeFromCart, subTotal, cart }) {
       {token ? <Navbar props={"Order"} /> : <Navbar props={"Login"} />}
 
       <Head>
-        <script src="https://cdn.tailwindcss.com"></script>
+        
+      <Script src="https://cdn.tailwindcss.com"></Script>
       </Head>
 
       <HomePage />
@@ -46,7 +48,7 @@ function index({ addToCart, removeFromCart, subTotal, cart }) {
         {data
           ? data.msg.map((e) => {
               return (
-                <Product
+                <Product key={e.poster.url}
                   addToCart={addToCart}
                   removeFromCart={removeFromCart}
                   url={e.poster.url}
@@ -62,4 +64,4 @@ function index({ addToCart, removeFromCart, subTotal, cart }) {
   );
 }
 
-export default index;
+export default Index;

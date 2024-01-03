@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -47,8 +48,10 @@ function Cart({ subTotal, addToCart, removeFromCart, cart }) {
   return (
     <>
       <Navbar props={"Order"} />
+      
       <Head>
-        <script src="https://cdn.tailwindcss.com"></script>
+
+        <Script src="https://cdn.tailwindcss.com"></Script>
       </Head>
       <div className="bg-gray-100 h-screen py-8">
         <div className="container mx-auto px-4">
@@ -69,7 +72,7 @@ function Cart({ subTotal, addToCart, removeFromCart, cart }) {
                     
                     {Object.keys(cart).length==0 ? <tr><td><br /><br /><span style={{display:"flex", justifyContent:"center"}}>No items in the cart......</span></td></tr> : Object.keys(cart).map((elem) => {
                       return (
-                        <tr>
+                        <tr key={cart[elem].url}>
                           <td className="py-4">
                             <div className="flex items-center">
                               <img

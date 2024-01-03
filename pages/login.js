@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -57,7 +58,8 @@ function Login() {
     
      <Navbar props={"Signup"}/>
       <Head>
-        <script src="https://cdn.tailwindcss.com"></script>
+        
+      <Script src="https://cdn.tailwindcss.com"></Script>
       </Head>
       <div class="relative mx-auto w-full max-w-md bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10">
         <div class="w-full">

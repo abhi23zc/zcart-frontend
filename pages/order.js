@@ -76,7 +76,7 @@ function Order() {
                         console.log(e);
                         return (
                           <>
-                            <tr
+                            <tr key={e._id}
                               onClick={() => {
                                 router.push(`/orders/${e._id}`);
                               }}

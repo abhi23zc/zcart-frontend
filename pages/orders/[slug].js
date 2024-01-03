@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import axios from "axios";
 import Head from "next/head";
 import { Router, useRouter } from "next/router";
+import Script from "next/script";
 import { useEffect, useState } from "react";
 
 const SlugPage = () => {
@@ -43,7 +44,8 @@ return (
     <>
     <Navbar props={"Order"}/>
       <Head>
-        <script src="https://cdn.tailwindcss.com"></script>
+        
+      <Script src="https://cdn.tailwindcss.com"></Script>
       </Head>
       <div className="bg-gray-100 h-screen py-8">
         <div className="container mx-auto px-4">
@@ -66,7 +68,7 @@ return (
                       Object.keys(cart['products']).map((elem) => {
                         // let elem = (cart['products'][elem])
                       return (
-                        <tr>
+                        <tr key={cart['products'][elem].url}>
                           <td className="py-4">
                             <div className="flex items-center">
                               <img
