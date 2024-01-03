@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 
-function login() {
+function Login() {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
@@ -26,7 +26,7 @@ function login() {
     
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/auth/login`,
+        `${process.env.NEXT_PUBLIC_BASE_URL}/auth/Login`,
         requestOptions
       );
 
@@ -137,4 +137,4 @@ function login() {
   );
 }
 
-export default login;
+export default Login;

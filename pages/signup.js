@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
-function signup() {
+function Signup() {
   const router = useRouter();
   const [email, setemail] = useState("");
   const [name, setname] = useState("");
@@ -156,4 +156,4 @@ function signup() {
   );
 }
 
-export default signup;
+export default Signup;

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
-function cart({ subTotal, addToCart, removeFromCart, cart }) {
+function Cart({ subTotal, addToCart, removeFromCart, cart }) {
   const router = useRouter();
 
   const checkout = async () => {
@@ -168,4 +168,4 @@ function cart({ subTotal, addToCart, removeFromCart, cart }) {
   );
 }
 
-export default cart;
+export default Cart;

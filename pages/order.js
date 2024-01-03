@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Router, useRouter } from "next/router";
 import Navbar from "@/components/Navbar";
-function order() {
+function Order() {
   //     try {
   //       const response = await fetch("http://localhost/orders", {
   //         method:'get',
@@ -114,4 +114,4 @@ function order() {
   );
 }
 
-export default order;
+export default Order;
